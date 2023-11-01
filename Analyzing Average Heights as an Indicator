@@ -1,0 +1,20 @@
+# Ask the user to input the heights of students
+heights = input("Type in the heights of the students (comma-separated): ")
+heights_list = [float(height) for height in heights.split(",")]
+
+# Initialize variables to keep track of total height and the number of students
+total_height = 0
+num_students = 0
+
+# Calculate the total height and count the number of students
+for height in heights_list:
+    total_height += height
+    num_students += 1
+
+# Calculate the average height
+average_height = total_height / num_students
+
+# Display the results
+print("Total height: {:.2f}".format(total_height))
+print("Number of students: {}".format(num_students))
+print("Average height: {:.2f}".format(average_height))
